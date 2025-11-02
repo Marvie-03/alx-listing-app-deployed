@@ -41,3 +41,18 @@ export interface PropertyProps  {
   image: string;
   discount: string;
 }
+
+export interface Property {
+  id: string | number;
+  title: string;
+  price: string | number;
+  location: string;
+  image: string;
+  bedrooms?: number;
+  bathrooms?: number;
+  area?: string;
+}
+
+export interface PropertyCardProps {
+  property: Property;
+}
