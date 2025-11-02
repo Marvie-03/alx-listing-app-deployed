@@ -31,7 +31,7 @@ interface PropertyOffers {
   occupants: string;
 }
 
-export interface PropertyProps  {
+export interface PropertyProps {
   name: string;
   address: PropertyAddress;
   rating: number;
@@ -51,8 +51,13 @@ export interface Property {
   bedrooms?: number;
   bathrooms?: number;
   area?: string;
+  amenities?: string[];
+  description?: string;
 }
 
 export interface PropertyCardProps {
+  property: Property;
+}
+export interface PropertyDetailProps {
   property: Property;
 }
