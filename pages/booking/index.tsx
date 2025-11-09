@@ -1,8 +1,19 @@
 import axios from "axios";
 import { useState } from "react";
 
+interface BookingFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  cardNumber: string;
+  expirationDate: string;
+  cvv: string;
+  billingAddress: string;
+}
+
 export default function BookingForm() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<BookingFormData>({
     firstName: "",
     lastName: "",
     email: "",
@@ -14,9 +25,9 @@ export default function BookingForm() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);

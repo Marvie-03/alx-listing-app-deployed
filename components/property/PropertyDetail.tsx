@@ -10,7 +10,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ property }) => {
       <div className="relative h-64 w-full mb-6 rounded-lg overflow-hidden">
         <Image
           src={property.image}
-          alt={property.title}
+          alt={property?.title || "Default"}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

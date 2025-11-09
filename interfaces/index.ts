@@ -1,11 +1,4 @@
-import React from 'react';
-
-// Placeholder for CardProps
-export interface CardProps {
-  property: PropertyProps;
-  onFavorite?: (property: PropertyProps) => void;
-  onBook?: (property: PropertyProps) => void;
-}
+import React from "react";
 
 export interface PillProps {
   label: string;
@@ -26,33 +19,35 @@ interface PropertyAddress {
 }
 
 interface PropertyOffers {
-  bed: string;
-  shower: string;
-  occupants: string;
-}
-
-export interface PropertyProps {
-  name: string;
-  address: PropertyAddress;
-  rating: number;
-  category: string[];
-  price: number;
-  offers: PropertyOffers;
-  image: string;
-  discount: string;
+  bed: number | string;
+  shower: number | string;
+  occupants: number | string;
 }
 
 export interface Property {
-  id: string | number;
-  title: string;
-  price: string | number;
-  location: string;
+  id?: string | number;
+  name: string;
+  title?: string;
+  price: number;
+  location?: string;
+  address: PropertyAddress;
+  rating: number;
+  category: string[];
+  offers: PropertyOffers;
   image: string;
+  discount?: number | string;
   bedrooms?: number;
   bathrooms?: number;
   area?: string;
   amenities?: string[];
   description?: string;
+}
+
+// Placeholder for CardProps
+export interface CardProps {
+  property: Property;
+  onFavorite?: (property: Property) => void;
+  onBook?: (property: Property) => void;
 }
 
 export interface PropertyCardProps {

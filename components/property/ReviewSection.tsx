@@ -1,8 +1,16 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+interface ReviewSectionProps {
+  propertyId: string | number; // or `number` if it's a numeric ID
+}
+interface Review {
+  id: string;
+  comment: string;
+  // Add other properties as needed
+}
 
-const ReviewSection = ({ propertyId }) => {
-  const [reviews, setReviews] = useState([]);
+const ReviewSection = ({ propertyId }: ReviewSectionProps) => {
+  const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
