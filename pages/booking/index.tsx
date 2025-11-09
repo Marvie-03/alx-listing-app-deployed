@@ -1,19 +1,9 @@
+import BookingForms from "@/components/booking/BookingForm";
 import axios from "axios";
 import { useState } from "react";
 
-interface BookingFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  cardNumber: string;
-  expirationDate: string;
-  cvv: string;
-  billingAddress: string;
-}
-
 export default function BookingForm() {
-  const [formData, setFormData] = useState<BookingFormData>({
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -43,12 +33,6 @@ export default function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {/* Form fields for booking details */}
-      <button type="submit" disabled={loading}>
-        {loading ? "Processing..." : "Confirm & Pay"}
-      </button>
-      {error && <p className="text-red-500">{error}</p>}
-    </form>
+    <BookingForms />
   );
 }

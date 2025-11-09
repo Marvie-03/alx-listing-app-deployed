@@ -1,4 +1,4 @@
-const BookingForm = () => (
+const BookingForms = () => (
   <div className="bg-white p-6 shadow-md rounded-lg">
     <h2 className="text-xl font-semibold">Contact Detail</h2>
     <form>
@@ -76,4 +76,4 @@ const BookingForm = () => (
   </div>
 );
 
-export default BookingForm;
+export default BookingForms;
