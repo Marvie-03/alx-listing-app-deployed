@@ -39,7 +39,7 @@ const Header = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="flex items-center bg-white border border-gray-300 rounded-full shadow-sm hover:shadow-md transition-shadow duration-200 max-w-2xl">
+        <div className="hidden md:block flex items-center bg-white border border-gray-300 rounded-full shadow-sm hover:shadow-md transition-shadow duration-200 max-w-2xl">
           <div className="px-6 py-3 border-r border-gray-300">
             <div className="text-xs font-semibold text-gray-800 mb-1">Location</div>
             <input

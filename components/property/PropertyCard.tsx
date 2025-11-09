@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image"; // If using Next.js for optimized images
+import Image from "next/image";
 import { PropertyCardProps } from "@/interfaces";
-
-
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   return (
@@ -15,6 +13,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
         />
       </div>
 
